@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 
 ventana = Tk()
 
@@ -17,6 +18,10 @@ def enviar(entry1,entry2,entry3):
     listaBox.insert(END,'PREPARACION : ', entry2)
     listaBox.insert(END,'RECOMENDACIONES : ', entry3)
     listaBox.insert(END,'---------------------------------------------------------------------------- ')
+
+    messagebox.showinfo("Aviso", "Creado exitosamente")
+
+
 
 
 
@@ -42,10 +47,10 @@ menubar.add_cascade(label="opcion3")
 
 
 
-Label(ventana,text='RECETARIO').place(x=439,y=25,width=100,height=20)
-Label(ventana, text='Ingredientes').place(x=100,y=100,width=100,height=20)
-Label(ventana, text='Preparacion').place(x=130,y=130,width=100,height=20)
-Label(ventana, text='Recomendaciones').place(x=160,y=160,width=100,height=20)
+Label(ventana,text='RECETARIO',background="CadetBlue").place(x=439,y=25,width=100,height=20)
+Label(ventana, text='Ingredientes : ',background="CadetBlue").place(x=100,y=100,width=100,height=20)
+Label(ventana, text='Preparacion : ',background="CadetBlue").place(x=130,y=130,width=100,height=20)
+Label(ventana, text='Recomendaciones : ',background="CadetBlue").place(x=160,y=160,width=100,height=20)
 
 # ----
 botonCrear = Button(ventana,text="CREAR",command= lambda:enviar(entry1.get(),entry2.get(),
